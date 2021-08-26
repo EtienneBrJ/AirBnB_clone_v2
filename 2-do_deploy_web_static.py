@@ -13,7 +13,6 @@ env.user = 'ubuntu'
 env.key_filename = '~/.ssh/holberton'
 
 
-
 def do_deploy(archive_path):
     """Distributes an archive to a web server
     """
