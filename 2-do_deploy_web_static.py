@@ -3,7 +3,8 @@
     that distributes an archive to your web servers,
     using the function do_deploy
 """
-from fabric.api import run, put, env
+from fabric.api import run, put
+from fabric.api import env
 from os import path
 
 
