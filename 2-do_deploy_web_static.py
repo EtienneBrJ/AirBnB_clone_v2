@@ -9,6 +9,9 @@ from os import path
 
 
 env.hosts = ['34.75.72.178', '34.139.192.61']
+env.user = 'ubuntu'
+env.key_filename = '~/.ssh/holberton'
+
 
 
 def do_deploy(archive_path):

@@ -8,6 +8,8 @@ from os import path
 
 
 env.hosts = ['34.75.72.178', '34.139.192.61']
+env.user = 'ubuntu'
+env.key_filename = '~/.ssh/holberton'
 
 
 def do_pack():
@@ -70,4 +72,6 @@ def deploy():
             Return the return value of do_deploy
     """
     path = do_pack()
-    return do_deploy(path) if path else False
+    if path is None:
+        return False
+    return do_deploy(path)
