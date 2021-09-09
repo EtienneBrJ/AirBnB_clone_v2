@@ -39,6 +39,12 @@ def display_template(number):
     if number:
         return render_template('5-number.html', number=number)
 
+@app.route('/number_odd_or_even/<int:number>', strict_slashes=False)
+def display_odd_or_even(number):
+    if number:
+        return render_template('6-number_odd_or_even.html', number=number)
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
