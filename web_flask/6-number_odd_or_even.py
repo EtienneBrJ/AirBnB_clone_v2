@@ -47,15 +47,13 @@ def number(intoprint):
 @app.route('/number_template/<int:number>', strict_slashes=False)
 def display_template(number):
     """ """
-    if number:
-        return render_template('5-number.html', number=number)
+    return render_template('5-number.html', number=number)
 
 
 @app.route('/number_odd_or_even/<int:number>', strict_slashes=False)
 def display_odd_or_even(number):
     """ """
-    if number:
-        return render_template('6-number_odd_or_even.html', number=number)
+    return render_template('6-number_odd_or_even.html', number=number)
 
 
 if __name__ == "__main__":
