@@ -35,7 +35,7 @@ def cisfun(text):
 @app.route("/python/<text>", strict_slashes=False)
 def pyiscool(text="is cool"):
     """ """
-    return "C {}".format(text.replace("_", " "))
+    return "Python {}".format(text.replace("_", " "))
 
 
 @app.route("/number/<int:intoprint>", strict_slashes=False)
