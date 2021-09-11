@@ -24,7 +24,7 @@ def hbnb():
     return "HBNB"
 
 
-@app.route("/C/<text>", strict_slashes=False)
+@app.route("/c/<text>", strict_slashes=False)
 def cisfun(text):
     """ """
     return "C {}".format(text.replace("_", " "))
