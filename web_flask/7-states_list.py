@@ -4,8 +4,7 @@ The application listens on 0.0.0.0, port 5000.
 Routes:
         list of State sorted by the name
 """
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template
 from models import storage
 
 app = Flask(__name__)
