@@ -4,6 +4,7 @@ import models
 from sqlalchemy import Column, Integer, String, ForeignKey
 from models.base_model import BaseModel, Base
 from sqlalchemy.orm import relationship
+from models.city import City
 from os import getenv
 
 
@@ -22,8 +23,8 @@ class State(BaseModel, Base):
         def cities(self):
             """ Getter attribute -> Relationship
                 between State and City for FileStorage """
-            list = []
-            for city in len(models.storage.all(City).values()):
+            c_list = []
+            for city in list(models.storage.all(City).values()):
                 if city.state_id == self.id:
-                    list.append(city)
-            return list
+                    c_list.append(city)
+            return c_list
