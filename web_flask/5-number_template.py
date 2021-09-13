@@ -15,38 +15,38 @@ app = Flask(__name__)
 
 @app.route("/", strict_slashes=False)
 def hello_hbnb():
-    """ """
+    """ Display Hello HBNB """
     return "Hello HBNB!"
 
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """ """
+    """ Display Hello HBNB """
     return "HBNB"
 
 
 @app.route("/c/<text>", strict_slashes=False)
 def cisfun(text):
-    """ """
+    """ Display Hello HBNB """
     return "C {}".format(text.replace("_", " "))
 
 
 @app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def pyiscool(text="is cool"):
-    """ """
+    """ Display Hello HBNB """
     return "C {}".format(text.replace("_", " "))
 
 
 @app.route("/number/<int:intoprint>", strict_slashes=False)
 def number(intoprint):
-    """ """
+    """ Display Hello HBNB """
     return '{} is a number'.format(intoprint)
 
 
 @app.route('/number_template/<int:number>', strict_slashes=False)
 def display_template(number):
-    """ """
+    """ Display Hello HBNB """
     if number:
         return render_template('5-number.html', number=number)
 

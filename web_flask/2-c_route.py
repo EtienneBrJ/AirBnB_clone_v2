@@ -17,13 +17,13 @@ def hello_hbnb():
 
 @app.route("/hbnb", strict_slashes=False)
 def hbnb():
-    """ """
+    """ Display Hello HBNB """
     return "HBNB"
 
 
 @app.route("/c/<text>", strict_slashes=False)
 def cisfun(text):
-    """ """
+    """ Display Hello HBNB """
     return "C {}".format(text.replace("_", " "))
 
 
