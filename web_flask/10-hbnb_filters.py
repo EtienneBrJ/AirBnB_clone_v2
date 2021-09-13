@@ -5,7 +5,12 @@ Routes:
     /hbnb_filters: HBnB HTML filters page.
 """
 from models import storage
-from flask import Flask, render_template
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from flask import Flask
+from flask import render_template
+app = Flask(__name__)
 
 app = Flask(__name__)
 
@@ -13,10 +18,10 @@ app = Flask(__name__)
 @app.route("/hbnb_filters", strict_slashes=False)
 def hbnb_filters():
     """Displays the main HBNB filters HTML page."""
-    states = storage.all("State")
-    amenities = storage.all("Amenity")
-    return render_template("10-hbnb_filters.html",
-                           states=states, amenities=amenities)
+    states = storage.all('State').values()
+    cities = storage.all('City').values()
+    amenities = storage.all('Amenity').values()
+    return render_template('10-hbnb_filters.html', **locals())
 
 
 @app.teardown_appcontext
