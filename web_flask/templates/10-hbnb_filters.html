@@ -8,7 +8,7 @@
     <LINK rel="stylesheet" href="../static/styles/3-header.css">
     <LINK rel="stylesheet" href="../static/styles/3-footer.css">
     <LINK rel="stylesheet" href="../static/styles/6-filters.css">
-    <LINK rel="icon" href="../static/images/icon.png">
+    <LINK rel="icon" href="../static/images/icon.ico">
   </HEAD>
 
   <BODY>
@@ -21,7 +21,7 @@
           <H4>&nbsp;</H4>
           <DIV class="popover">
             <UL>
-            {% for state in states.values()|sort(attribute="name") %}
+            {% for state in states|sort(attribute="name") %}
               <LI><STRONG>{{ state.name }}</STRONG>
                 <UL>
                 {% for city in state.cities|sort(attribute="name") %}
@@ -37,7 +37,7 @@
           <H3>Amenities</H3>
           <H4>&nbsp;</H4>
           <DIV class="popover">
-          {% for amenity in amenities.values()|sort(attribute="name") %}
+          {% for amenity in amenities|sort(attribute="name") %}
             <LI>{{ amenity.name }}</LI>
           {% endfor %}
           </DIV>
